@@ -9,11 +9,21 @@ import UIKit.UIImage
 
 public class APODViewModel {
     let provider: DataProviding
+    private lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter
+    }()
+
     var title: String { return apod?.title ?? "Loading..." }
     var image: UIImage?
-    var explanation: String? { return apod?.explanation }
+    var explanation: String? { return apod?.explanation ?? "Loading..." }
 
     var viewModelUpdated: (() -> ())?
+    var isShowingOldModel: Bool {
+        guard let model = apod else { return false }
+        return isAPODModelOld(model)
+    }
 
     var apod: APODModel? {
         didSet {
@@ -33,5 +43,11 @@ public class APODViewModel {
             self?.apod = apod
             self?.viewModelUpdated?()
         }
+    }
+
+    private func isAPODModelOld(_ model: APODModel) -> Bool {
+        let dateString = dateFormatter.string(from: Date.now)
+        let isModelOld = apod?.date != dateString
+        return isModelOld
     }
 }

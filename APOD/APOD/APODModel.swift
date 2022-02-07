@@ -11,4 +11,5 @@ public struct APODModel: Codable {
     public let title: String
     public let url: String?
     public let explanation: String?
+    public let date: String?
 }

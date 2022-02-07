@@ -16,7 +16,6 @@ class FullImageViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageView.image = imageToShow
-        self.scrollView.contentSize = imageToShow?.size ?? .zero
     }
 
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

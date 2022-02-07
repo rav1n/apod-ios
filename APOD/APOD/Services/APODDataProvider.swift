@@ -13,6 +13,8 @@ public class APODDataProvider: DataProviding {
     private let remoteDataProvider = APODRemoteDataProvider(networkManager: NetworkManager())
     private let localDataProvider = APODLocalDataProvider()
 
+    var isRemoteConnectionAvailable: Bool { return remoteDataProvider.isAvailable }
+
     public func fetchAPODModel(completion: @escaping (APODModel?) -> Void) {
         if remoteDataProvider.isAvailable {
             remoteDataProvider.fetchAPODModel { [weak self] model in
