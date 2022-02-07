@@ -98,13 +98,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		6BD16A1B27B10F9F00374BB6 /* ViewControllers */ = {
+		6BD16A1B27B10F9F00374BB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				6BEE5F6527A6D4D1009B6267 /* APODViewController.swift */,
 				6BD16A1127B0658300374BB6 /* FullImageViewController.swift */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		6BD16A1C27B10FB800374BB6 /* App */ = {
@@ -114,6 +114,22 @@
 				6BEE5F6327A6D4D1009B6267 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		6BD16A1D27B11A7700374BB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BD16A0D27B0631C00374BB6 /* APODModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BD16A1E27B11A8000374BB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BD16A0F27B0633600374BB6 /* APODViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6BEE5F5527A6D4D1009B6267 = {
@@ -137,12 +153,12 @@
 		6BEE5F6027A6D4D1009B6267 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				6BD16A1E27B11A8000374BB6 /* ViewModel */,
+				6BD16A1D27B11A7700374BB6 /* Model */,
 				6BD16A1C27B10FB800374BB6 /* App */,
-				6BD16A1B27B10F9F00374BB6 /* ViewControllers */,
+				6BD16A1B27B10F9F00374BB6 /* View */,
 				6BD16A0C27B062B300374BB6 /* Services */,
 				6BD16A0527B0624C00374BB6 /* Protocols */,
-				6BD16A0D27B0631C00374BB6 /* APODModel.swift */,
-				6BD16A0F27B0633600374BB6 /* APODViewModel.swift */,
 				6BEE5F6727A6D4D1009B6267 /* Main.storyboard */,
 				6BEE5F6A27A6D4D2009B6267 /* Assets.xcassets */,
 				6BEE5F6C27A6D4D2009B6267 /* LaunchScreen.storyboard */,
