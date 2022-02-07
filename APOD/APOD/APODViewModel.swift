@@ -8,7 +8,7 @@
 import UIKit.UIImage
 
 public class APODViewModel {
-    let provider: APODDataProvider
+    let provider: DataProviding
     var title: String { return apod?.title ?? "Loading..." }
     var image: UIImage?
     var explanation: String? { return apod?.explanation }
@@ -26,7 +26,7 @@ public class APODViewModel {
         }
     }
 
-    init(provider: APODDataProvider) {
+    init(provider: DataProviding) {
         self.provider = provider
         provider.fetchAPODModel { [weak self] apod in
             guard let apod = apod else { return }

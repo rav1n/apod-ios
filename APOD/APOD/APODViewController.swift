@@ -13,8 +13,7 @@ class APODViewController: UIViewController {
     @IBOutlet weak var explanationLabel: UITextView!
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    let provider = APODDataProvider(networkManager: NetworkManager())
-
+    let provider = APODDataProvider()
     var viewModel: APODViewModel?
 
     override func viewDidLoad() {
